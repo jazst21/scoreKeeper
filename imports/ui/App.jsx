@@ -1,6 +1,6 @@
 import React from 'react';
 import config1, { Title, Players } from './Config';
-import PlayersData from '../api/PlayersData';
+//import PlayersData from '../api/PlayersData';
 
 class App extends React.Component {
   constructor(props) {
@@ -26,6 +26,10 @@ class App extends React.Component {
     PlayersData.insert({
       name: this.state.name,
       score: this.state.score
+    });
+    this.setState({
+      name: "",
+      score: 0
     })
   };
   removePlayer(event) {
